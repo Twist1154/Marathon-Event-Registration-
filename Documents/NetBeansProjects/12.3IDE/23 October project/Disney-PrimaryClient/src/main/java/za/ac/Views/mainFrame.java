@@ -1,5 +1,8 @@
 package za.ac.Views;
 
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -26,6 +29,7 @@ public class mainFrame implements ActionListener {
     private JButton btnIssuedBook;
     private JButton btnAddStudent;
     private JButton btnViewStudent;
+    private JButton btnAddAdmin;
 
     public mainFrame() {
         mainFrame = new JFrame("Disney Primary");
@@ -44,24 +48,22 @@ public class mainFrame implements ActionListener {
         btnIssuedBook = new JButton("Books Due");
         btnAddStudent = new JButton("Add Student");
         btnViewStudent = new JButton("View Student");
+        btnAddAdmin = new JButton("Add Admin");
     }
 
     public void setGUI() {
-
+        Image icon = Toolkit.getDefaultToolkit().getImage("kids.png");
+        mainFrame.setIconImage(icon);
+        mainFrame.setBackground(Color.MAGENTA);
         btnViewBooks.setBounds(20, 20, 120, 25);//x axis, y axis, width, height  
         btnViewStudent.setBounds(20, 60, 120, 25);//x axis, y axis, width, height 
         btnAddBook.setBounds(150, 20, 120, 25);
         btnAddStudent.setBounds(150, 60, 120, 25); //set dimensions for button
         btnIssuedBook.setBounds(280, 20, 160, 25);//x axis, y axis, width, height
         btnReturnBook.setBounds(280, 60, 160, 25);
-//        btnAddBook.setBounds(450, 60, 120, 25);
         btnIssueBook.setBounds(450, 20, 120, 25);
-//        create_but.setBounds(450, 60, 120, 25);//x axis, y axis, width, height 
-//        btnViewStudent.setBounds(150, 20, 120, 25);//x axis, y axis, width, height
-//        JButton create_but = new JButton("Create/Reset");//creating instance of JButton to create or reset database
-//        btnUsers.setBounds(150, 20, 120, 25);//x axis, y axis, width, height 
+        btnAddAdmin.setBounds(450, 60, 120, 25);
         mainFrame.add(btnViewBooks);
-        mainFrame.add(btnAddBook);
         mainFrame.add(btnAddBook);
         mainFrame.add(btnIssueBook);
         mainFrame.add(btnReturnBook);
