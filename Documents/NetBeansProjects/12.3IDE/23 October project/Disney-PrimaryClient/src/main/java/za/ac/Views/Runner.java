@@ -15,7 +15,7 @@ public class Runner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       new MainFrame().setGUI();
+       new mainFrame().setGUI();
     }
     
 }

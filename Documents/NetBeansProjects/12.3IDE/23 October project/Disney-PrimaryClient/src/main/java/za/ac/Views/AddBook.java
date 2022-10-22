@@ -139,7 +139,7 @@ public class AddBook implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-        if(e.getActionCommand()=="Save"){
+        if(e.getSource()==saveButton){
              if(bookIsbnField.getText().isBlank() || bookTitleField.getText().isBlank()|| 
                bookAuthorField.getText().isBlank() || categoryField.getText().isBlank()||
                shelfNumberField.getText().isBlank() || noOfBooksField.getText().isBlank() )
@@ -147,10 +147,11 @@ public class AddBook implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Ensure all fields are filled.");
             }
         }
-        else if(e.getActionCommand()== "Back" )
+        else if(e.getSource()== backButton )
         {            
-            mainFrame.dispose();
+           new  mainFrame().setGUI();
             //add new mainFrameGUI from Rethabile.setGUI()
+            
         }   
         }
        catch(Exception ex)
@@ -158,7 +159,5 @@ public class AddBook implements ActionListener{
         System.out.println(e);
         }
     }
-    public static void main(String[] args) {
-        new AddBook().setGUI();
-    }
+   
 }
