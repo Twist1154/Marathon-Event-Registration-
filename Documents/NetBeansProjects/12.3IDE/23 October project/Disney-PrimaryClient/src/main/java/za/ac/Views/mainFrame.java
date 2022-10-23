@@ -79,7 +79,7 @@ public class mainFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnViewBooks) {
-
+            new ViewBook().setGUI();
         } else if (e.getSource() == btnAddBook) {
             new AddBook().setGUI();
         } else if (e.getSource() == btnIssueBook) {
